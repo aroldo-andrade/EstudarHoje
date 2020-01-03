@@ -22,22 +22,49 @@ body{
 
  .cog{
     -webkit-app-region: no-drag;
-    width: 20px;
+    width: 10px;
     position: absolute;
-    left: 220px;
-    top: 6px;
+    left: 210px;
+    top: 3px;
     box-shadow: 0px 0px 3px 0px black;
     border-radius: 5px;
     padding: 2px 2px;
     background-color: #ffffff;
+    transition: transform 0.2s, width 0.2s ;
+
  }
- .cogA{
+ .cog-a{
     -webkit-app-region: no-drag;
      cursor: pointer;
+ }
+ .cog:hover{
+    width: 20px;
+    z-index: 999;
+    transform: translateY(4px) translateX(3px);
+    
+ }
+ .close{
+    -webkit-app-region: no-drag;
+    width: 10px;
+    position: absolute;
+    left: 230px;
+    top: 3px;
+    box-shadow: 0px 0px 3px 0px #360e0c;
+    border-radius: 5px;
+    padding: 2px 2px;
+    background-color: #ff3a2f;
+    transition: transform 0.2s, width 0.2s ;
+ }
+ .close-a{
+    -webkit-app-region: no-drag;
+    cursor: pointer;
+ }
+ .close:hover{
+    width: 20px;
+    transform: translateY(4px) translateX(-10px);
  }
 
  .barraSuperior{
      height: 20px;
      z-index: 999;
-
  }

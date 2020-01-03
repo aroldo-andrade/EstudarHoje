@@ -1,16 +1,80 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <script>
+        require('./js/scripts_init.js')
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/configuracao.css">
 </head>
-<body>
-    
 
+<body>
+    <div class="barraSuperior">
+        <small class="config-title">Configurações</small>
+        <a href="#" class="close-a"><img class="close-i" src="../../res/imgs/close.png"></a>
+    </div>
+    <div class="formContent">
+
+        <form>
+            <div class="form-group segunda">
+                <small for="segunda">Segunda:</small>
+                <input type="text" class="form-control form-control-sm segundaInput" id="segunda"
+                    aria-describedby="emailHelp" placeholder="O que você vai estudar?">
+            </div>
+            <div class="form-group terca">
+                <small for="terca">Terça:</small>
+                <input type="text" class="form-control form-control-sm tercaInput" id="terca"
+                    aria-describedby="emailHelp" placeholder="O que você vai estudar?">
+            </div>
+            <div class="form-group quarta">
+                <small for="quarta">Quarta:</small>
+                <input type="text" class="form-control form-control-sm quartaInput" id="quarta"
+                    aria-describedby="emailHelp" placeholder="O que você vai estudar?">
+            </div>
+            <div class="form-group quinta">
+                <small for="quinta">Quinta:</small>
+                <input type="text" class="form-control form-control-sm quintaInput" id="quinta"
+                    aria-describedby="emailHelp" placeholder="O que você vai estudar?">
+            </div>
+            <div class="form-group sexta">
+                <small for="sexta">Sexta:</small>
+                <input type="text" class="form-control form-control-sm sextaInput" id="sexta"
+                    aria-describedby="emailHelp" placeholder="O que você vai estudar?">
+            </div>
+            <div class="form-group sabado">
+                <small for="sabado">Sabado:</small>
+                <input type="text" class="form-control form-control-sm sabadoInput" id="sabado"
+                    aria-describedby="emailHelp" placeholder="O que você vai estudar?">
+            </div>
+            <div class="form-group domingo">
+                <small for="domingo">Domingo:</small>
+                <input type="text" class="form-control form-control-sm domingoInput" id="domingo"
+                    aria-describedby="emailHelp" placeholder="O que você vai estudar?">
+            </div>
+            <div class="btnSalvar">
+                <button type="submit" class="btn btn-primary btn-sm btnSalvar">Salvar</button>
+            </div>
+        </form>
+
+    </div>
     <script>
         require('./js/configuracao')
     </script>
 </body>
+
 </html>

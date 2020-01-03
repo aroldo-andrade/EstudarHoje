@@ -6,6 +6,7 @@ window.ELECTRON_DISABLE_SECURITY_WARNINGS = true
 let diaSemana = new Date().getDay()
 let diaDaSemanaImg = document.querySelector('.diaDaSemana')
 let cogA = document.querySelector('.cog-a')
+let closeA = document.querySelector('.close-a')
 let content = document.querySelector('.content')
 let pathImgns = '../../res/imgs/$dia$.png'
 //diaSemana = 0
@@ -13,6 +14,10 @@ let pathImgns = '../../res/imgs/$dia$.png'
 
 cogA.addEventListener('click',()=>{
     ipcRenderer.send('abrir-configuracao')
+})
+
+closeA.addEventListener('click',()=>{
+    ipcRenderer.send('close-principal')
 })
 
 
