@@ -1,4 +1,4 @@
-const {ipcRenderer} = require('electron')
+const {ipcRenderer,remote} = require('electron')
 const data = require('../../../core/data.handler')
 
 window.ELECTRON_DISABLE_SECURITY_WARNINGS = true
@@ -12,6 +12,7 @@ let quintaInput = document.querySelector('.quintaInput')
 let sextaInput = document.querySelector('.sextaInput')
 let sabadoInput = document.querySelector('.sabadoInput')
 let domingoInput = document.querySelector('.domingoInput')
+let principal = remote.getGlobal('mainWindow')
 
 closeA.addEventListener('click',()=>{
     ipcRenderer.send('close-config')
@@ -41,7 +42,9 @@ btnSalvar.addEventListener('click',()=>{
         domingo: domingoInput.value
     }
     data.salvaDados(database,()=>{
+        principal.webContents.send('save-config')
         ipcRenderer.send('close-config')
+        
     })
 
 })

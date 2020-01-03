@@ -1,5 +1,6 @@
 
 const {ipcRenderer} = require('electron')
+const dataHandler = require('../../../core/data.handler')
 window.ELECTRON_DISABLE_SECURITY_WARNINGS = true
 
 
@@ -8,8 +9,14 @@ let diaDaSemanaImg = document.querySelector('.diaDaSemana')
 let cogA = document.querySelector('.cog-a')
 let closeA = document.querySelector('.close-a')
 let content = document.querySelector('.content')
+let assuntoH1 = document.querySelector('.assuntoH1')
 let pathImgns = '../../res/imgs/$dia$.png'
-//diaSemana = 0
+diaSemana = 0
+let enumDiasSemana = dataHandler.getEnumDiasSemana()
+
+window.onload = () => {
+    carregaAssunto()
+}
 
 
 cogA.addEventListener('click',()=>{
@@ -20,6 +27,17 @@ closeA.addEventListener('click',()=>{
     ipcRenderer.send('close-principal')
 })
 
+carregaAssunto = () =>{
+    dataHandler.pegaDados()
+        .then((dados) => {
+            let enumDia = enumDiasSemana.find(f => f.id == diaSemana)
+            assuntoH1.innerHTML = dados[enumDia.dia]
+        })
+}
+
+ipcRenderer.on('save-config',()=>{
+    carregaAssunto();
+})
 
 switch (diaSemana) {
     case 0:

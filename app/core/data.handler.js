@@ -69,5 +69,17 @@ module.exports = {
         })
 
     },
+    getEnumDiasSemana(){
+        return [
+            {dia:'domingo',id:0},
+            {dia:'segunda',id:1},
+            {dia:'terca',id:2},
+            {dia:'quarta',id:3},
+            {dia:'quinta',id:4},
+            {dia:'sexta',id:5},
+            {dia:'sabado',id:6},
+        
+        ]
+    }
 
 }
