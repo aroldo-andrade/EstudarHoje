@@ -3,7 +3,7 @@ const { app, BrowserWindow, ipcMain } = require('electron')
 
 global.mainWindow
 let devtoolWidth = 0//  rmeover apos o desenvolvimento
-let x = 500; // ajustar aqui onde vc quer que a tela apareça primeiro
+let x = 1000; // ajustar aqui onde vc quer que a tela apareça primeiro
 let y = 400;
 app.on('ready', () => {
 
