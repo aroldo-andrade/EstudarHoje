@@ -22,7 +22,7 @@
     "jquery": "^3.4.1",
     "jsonfile-promised": "0.0.1",
     "mkdirp": "^0.5.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "popper": "^1.0.1"
   },
   "devDependencies": {
